@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, File, UploadFile, HTTPException
 from typing import List
 from sqlalchemy.ext.asyncio import AsyncSession
 from src.utils.auth import jwt_required
-from src.config.configuration import get_db
+from src.db.database import get_db
 from src.controllers.report_controller import ReportController
 
 router = APIRouter(prefix="/reports", tags=["reports"])
